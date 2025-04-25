@@ -1,0 +1,84 @@
+Insert users (make sure UserID 1–7 exist)
+INSERT INTO Users (Username, Email, PasswordHash)
+VALUES
+('user1', 'user1@example.com', 'hash1'),
+('user2', 'user2@example.com', 'hash2'),
+('user3', 'user3@example.com', 'hash3'),
+('user4', 'user4@example.com', 'hash4'),
+('user5', 'user5@example.com', 'hash5'),
+('user6', 'user6@example.com', 'hash6'),
+('user7', 'user7@example.com', 'hash7');
+
+
+-- Insert user preferences
+INSERT INTO User_Preferences (UserID, PreferenceType, PreferenceValue)
+VALUES
+(1, 'Lighting', 'Low Lighting'),
+(1, 'Dietary Requirements', 'Vegetarian'),
+(1, 'Cooking Schedule', 'Evening Shift'),
+
+(2, 'Lighting', 'Bright Lighting'),
+(2, 'Dietary Requirements', 'Low Sodium'),
+(2, 'Cooking Schedule', 'Morning Shift'),
+
+(3, 'Lighting', 'Soft Lighting'),
+(3, 'Dietary Requirements', 'Gluten-Free'),
+(3, 'Cooking Schedule', 'Flexible'),
+
+(4, 'Lighting', 'Dim Lighting'),
+(4, 'Dietary Requirements', 'Keto'),
+(4, 'Cooking Schedule', 'Evening Shift'),
+
+(5, 'Lighting', 'Bright Lighting'),
+(5, 'Dietary Requirements', 'Halal'),
+(5, 'Cooking Schedule', 'Night Shift'),
+
+(6, 'Lighting', 'Low Lighting'),
+(6, 'Dietary Requirements', 'Low Sugar'),
+(6, 'Cooking Schedule', 'Morning Shift'),
+
+(7, 'Lighting', 'Medium Lighting'),
+(7, 'Dietary Requirements', 'Vegetarian'),
+(7, 'Cooking Schedule', 'Evening Shift');
+
+
+-- Insert initial devices
+INSERT INTO Device_Status (DeviceName, Status, LogDetails) 
+VALUES 
+('Smart Dishwasher', 'Operational', 'Coordinates cleaning schedules and status updates.'),
+('Smart Lighting System', 'Operational', 'Adjusts lighting based on cooking activities or user preferences.'),
+('Smart Ventilation System', 'Operational', 'Monitors air quality and adjusts to remove odors or smoke.'),
+('Smart Microwave', 'Operational', 'Interfaces with the robotic chef for quick heating tasks.'),
+('Smart Pantry', 'Operational', 'Tracks inventory and shares ingredient information.'),
+('Smart Coffee Maker', 'Operational', 'Operates based on user schedules or commands from connected devices.'),
+('Water Quality Sensors', 'Operational', 'Monitors water supply for purity or cooking safety.'),
+('Energy Monitoring Devices', 'Operational', 'Tracks power usage of all connected appliances.'),
+('Smart Trash Bin', 'Operational', 'Provides waste management data or inventory for disposed items.'),
+('Robotic Chef', 'Operational', 'Communicates with sensors and other appliances for real-time adjustments.'),
+('Smart Stove', 'Operational', 'Communicates with the robotic chef and temperature sensors for cooking precision.'),
+('Refrigerator', 'Operational', 'Shares ingredient inventory and freshness data with the robotic chef and other appliances.'),
+('Smart Oven', 'Operational', 'Interacts with the robotic chef for pre-heating and other cooking tasks.'),
+('IoT Sensors', 'Operational', 'Temperature sensors, motion sensors, weight sensors, and humidity sensors.'),
+('IoT Cameras', 'Operational', 'Assist the robotic chef with vision-based tasks.');
+
+
+-- Insert initial inventory items
+INSERT INTO Inventory_Data (IngredientName, Quantity, StorageLocation, ExpirationDate, MinThreshold, ReorderAmount)
+VALUES
+('Noodles', 100.0, 'Pantry', '2025-12-31', 10.0, 20.0),
+('Broth', 50.0, 'Refrigerator', '2025-12-31', 5.0, 10.0),
+('Soy Sauce', 10.0, 'Pantry', '2026-12-31', 2.0, 5.0),
+('Miso Paste', 20.0, 'Refrigerator', '2025-12-31', 3.0, 5.0),
+('Sesame Oil', 5.0, 'Pantry', '2026-12-31', 1.0, 3.0),
+('Garlic', 3.0, 'Pantry', '2025-06-30', 1.0, 2.0),
+('Ginger', 5.0, 'Pantry', '2025-12-31', 1.0, 3.0),
+('Green Onions', 10.0, 'Refrigerator', '2025-04-30', 2.0, 5.0),
+('Boiled Eggs', 20.0, 'Refrigerator', '2025-04-30', 5.0, 10.0),
+('Bamboo Shoots', 15.0, 'Pantry', '2025-12-31', 3.0, 5.0),
+('Seaweed (Nori or Wakame)', 5.0, 'Pantry', '2026-12-31', 1.0, 3.0),
+('Chashu Pork', 10.0, 'Freezer', '2025-12-31', 2.0, 5.0),
+('Spinach', 15.0, 'Refrigerator', '2025-04-30', 3.0, 5.0),
+('Chili Paste', 2.0, 'Pantry', '2026-12-31', 1.0, 2.0),
+('Chicken', 10.0, 'Refrigerator', '2025-06-30', 2.0, 5.0);
+
+
