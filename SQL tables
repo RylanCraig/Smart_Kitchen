@@ -1,0 +1,49 @@
+CREATE TABLE Users (
+	    UserID INT AUTO_INCREMENT PRIMARY KEY,
+	    Username VARCHAR(50) NOT NULL UNIQUE,
+	    Email VARCHAR(100) NOT NULL UNIQUE,
+	    PasswordHash VARCHAR(255) NOT NULL, -- Store hashed passwords
+	    CreatedAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+	);
+	 
+ 
+CREATE TABLE Device_Status (
+    DeviceID INT AUTO_INCREMENT PRIMARY KEY, -- Unique id for each device
+    DeviceName VARCHAR(100) NOT NULL,        
+    Status VARCHAR(50) NOT NULL,             -- Status of the device ( 'Operational', 'Error')
+    LastUpdated TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP, 
+    LogDetails TEXT                          -- Detailed log 
+);
+ 
+CREATE TABLE Sensor_Readings (
+    SensorID INT AUTO_INCREMENT PRIMARY KEY,
+    SensorType VARCHAR(50) NOT NULL, -- For  'Temperature', 'Humidity'
+    ReadingValue DECIMAL(10, 2) NOT NULL, 
+    Timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    DeviceID INT NOT NULL,
+    FOREIGN KEY (DeviceID) REFERENCES Device_Status(DeviceID) 
+        ON DELETE CASCADE 
+        ON UPDATE CASCADE
+);
+ 
+CREATE TABLE User_Preferences (
+    PreferenceID INT AUTO_INCREMENT PRIMARY KEY,
+    UserID INT NOT NULL, -- Foreign key for Users table
+    PreferenceType VARCHAR(100) NOT NULL, -- For  'Lighting', 'Dietary Requirements'
+    PreferenceValue VARCHAR(255) NOT NULL,
+    UNIQUE(UserID, PreferenceType), 
+    FOREIGN KEY (UserID) REFERENCES Users(UserID) 
+        ON DELETE CASCADE 
+        ON UPDATE CASCADE
+);
+ 
+CREATE TABLE Inventory_Data (
+    IngredientID INT AUTO_INCREMENT PRIMARY KEY,
+    IngredientName VARCHAR(100) NOT NULL,
+    Quantity DECIMAL(10, 2) NOT NULL,  -- Ex: 5.5 lbs 
+    StorageLocation VARCHAR(100) NOT NULL,  -- Ex 'Refrigerator'
+    ExpirationDate DATE NOT NULL,
+    MinThreshold DECIMAL(10, 2) NOT NULL DEFAULT 1.0,  -- Min quant before reordering
+    ReorderAmount DECIMAL(10, 2) NOT NULL DEFAULT 5.0, -- reorder
+    LastUpdated TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
