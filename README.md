@@ -36,6 +36,7 @@ The **Smart Kitchen Web App** is a full-stack web application designed to modern
 5. **Create or Copy HTML and PHP Files**  
    1. You need to create all 6 HTML files as well as the `styles.css` file. Also, you can copy the code for these files from this GitHub repository.
    2. Additionally, make sure to copy all 9 PHP files from this repository to the correct project folder.
+   3. **Reminder**: All files (HTML, CSS, and PHP) must be placed in the `htdocs` directory within your XAMPP installation for the app to function correctly.
 
 6. **Open the App Locally**  
    After completing all the above steps, open a live server for your `index.html` file and enjoy your personal Smart Kitchen Web App connected to a local database.
@@ -43,8 +44,6 @@ The **Smart Kitchen Web App** is a full-stack web application designed to modern
 ## 📸 Screenshots
 All screenshots in the documentation were captured directly from my development environment.
 
-![Sample Dashboard](screenshots/dashboard.png)  
-*Sample dashboard showing real-time device statuses and inventory list.*
 
 ## 🧠 Future Enhancements
 - ✅ Real-time automated alerts (e.g., low inventory, high temperature)
