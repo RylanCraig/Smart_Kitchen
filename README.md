@@ -12,7 +12,7 @@ The **Smart Kitchen Web App** is a full-stack web application designed to modern
 
 ## 🛠️ Tech Stack
 
-- **Frontend**: HTML5, CSS3
+- **Frontend**: HTML5, CSS
 - **Backend**: PHP
 - **Database**: MySQL
 - **Development Environment**: [XAMPP](https://www.apachefriends.org/)
