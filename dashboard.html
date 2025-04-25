@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+    <h1>Dashboard</h1>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="devices.html">Devices</a></li>
+            <li><a href="inventory.html">Inventory</a></li>
+            <li><a href="preferences.html">Preferences</a></li>
+            <li><a href="sensors.html">Sensors</a></li>
+            
+        </ul>
+    </nav>
+</header>
+
+<div class="system-overview">
+    <section>
+        <h1>System Overview</h1>
+        <p class="intro-text">Here you can see an overview of your smart kitchen status.</p>
+    </section>
+</div>
+
+<br><br>
+
+<section>
+    <h2>Current Device Table</h2>
+    <table border="1">
+        <tr>
+            <th>Device ID</th>
+            <th>Device Name</th>
+            <th>Status</th>
+            <th>Log Details</th>
+            <th>Last Updated</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Smart Dishwasher</td>
+            <td>Operational</td>
+            <td>Coordinates cleaning schedules and status updates.</td>
+            <td>2025-04-08</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Smart Lighting System</td>
+            <td>Operational</td>
+            <td>Adjusts lighting based on cooking activities or user preferences.</td>
+            <td>2025-04-07</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Smart Ventilation System</td>
+            <td>Operational</td>
+            <td>Monitors air quality and adjusts to remove odors or smoke.</td>
+            <td>2025-04-06</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>Smart Microwave</td>
+            <td>Operational</td>
+            <td>Interfaces with the robotic chef for quick heating tasks.</td>
+            <td>2025-04-06</td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>Smart Pantry</td>
+            <td>Operational</td>
+            <td>Tracks inventory and shares ingredient information.</td>
+            <td>2025-04-08</td>
+        </tr>
+        <tr>
+            <td>6</td>
+            <td>Smart Coffee Maker</td>
+            <td>Operational</td>
+            <td>Operates based on user schedules or commands from connected devices.</td>
+            <td>2025-04-08</td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td>Water Quality Sensors</td>
+            <td>Operational</td>
+            <td>Monitors water supply for purity or cooking safety.</td>
+            <td>2025-04-08</td>
+        </tr>
+        <tr>
+            <td>8</td>
+            <td>Energy Monitoring Devices</td>
+            <td>Operational</td>
+            <td>Tracks power usage of all connected appliances</td>
+            <td>2025-04-08</td>
+        </tr>
+        <tr>
+            <td>9</td>
+            <td>Smart Trash Bin</td>
+            <td>Operational</td>
+            <td>Provides waste management data or inventory for disposed items.</td>
+            <td>2025-04-08</td>
+        </tr>
+        <tr>
+            <td>10</td>
+            <td>Robotic Chef</td>
+            <td>Operational</td>
+            <td>Communicates with sensors and other appliances for real-time adjustments.</td>
+            <td>2025-04-08</td>
+        </tr>
+        <tr>
+            <td>11</td>
+            <td>Smart Stove</td>
+            <td>Operational</td>
+            <td>Communicates with the robotic chef and temperature sensors for cooking precision.</td>
+            <td>2025-04-08</td>
+        </tr>
+        <tr>
+            <td>12</td>
+            <td>Refrigerator</td>
+            <td>Operational</td>
+            <td>Shares ingredient inventory and freshness data with the robotic chef and other appliances.</td>
+            <td>2025-04-08</td>
+        </tr>
+        <tr>
+            <td>13</td>
+            <td>Smart Oven</td>
+            <td>Operational</td>
+            <td>Interacts with the robotic chef for pre-heating and other cooking tasks</td>
+            <td>2025-04-08</td>
+        </tr>
+        <tr>
+            <td>14</td>
+            <td>IoT Sensors</td>
+            <td>Operational</td>
+            <td>Temperature sensors, motion sensors, weight sensors, and humidity sensors.</td>
+            <td>2025-04-08</td>
+        </tr>
+        <tr>
+            <td>15</td>
+            <td>IoT Cameras</td>
+            <td>Operational</td>
+            <td>Assist the robotic chef with vision-based tasks</td>
+            <td>2025-04-08</td>
+        </tr>
+        <!-- More rows as needed -->
+    </table>
+</section>
+
+<br><br>
+
+<section>
+    <h2>Inventory Overview</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Ingredient ID</th>
+                <th>Ingredient Name</th>
+                <th>Quantity</th>
+                <th>Storage Location</th>
+                <th>Expiration Date</th>
+                <th>Min Threshold</th>
+                <th>Reorder Amount</th>
+                <th>Last Updated</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Noodles</td>
+                <td>100.0</td>
+                <td>Pantry</td>
+                <td>2025-12-31</td>
+                <td>10.0</td>
+                <td>20.0</td>
+                <td>2023-10-11</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Broth</td>
+                <td>50.0</td>
+                <td>Refrigerator</td>
+                <td>2025-12-31</td>
+                <td>5.0</td>
+                <td>10.0</td>
+                <td>2023-10-11</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Soy Sauce</td>
+                <td>10.0</td>
+                <td>Pantry</td>
+                <td>2026-12-31</td>
+                <td>2.0</td>
+                <td>5.0</td>
+                <td>2023-10-11</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Miso Paste</td>
+                <td>20.0</td>
+                <td>Refrigerator</td>
+                <td>2025-12-31</td>
+                <td>3.0</td>
+                <td>5.0</td>
+                <td>2023-10-11</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>Sesame Oil</td>
+                <td>5.0</td>
+                <td>Pantry</td>
+                <td>2026-12-31</td>
+                <td>1.0</td>
+                <td>3.0</td>
+                <td>2023-10-11</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>Garlic</td>
+                <td>3.0</td>
+                <td>Pantry</td>
+                <td>2025-06-30</td>
+                <td>1.0</td>
+                <td>2.0</td>
+                <td>2023-10-11</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>Ginger</td>
+                <td>5.0</td>
+                <td>Pantry</td>
+                <td>2025-12-31</td>
+                <td>1.0</td>
+                <td>3.0</td>
+                <td>2023-10-11</td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td>Green Onions</td>
+                <td>10.0</td>
+                <td>Refrigerator</td>
+                <td>2025-04-30</td>
+                <td>2.0</td>
+                <td>5.0</td>
+                <td>2023-10-11</td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td>Boiled Eggs</td>
+                <td>20.0</td>
+                <td>Refrigerator</td>
+                <td>2025-04-30</td>
+                <td>5.0</td>
+                <td>10.0</td>
+                <td>2023-10-11</td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td>Bamboo Shoots</td>
+                <td>15.0</td>
+                <td>Pantry</td>
+                <td>2025-12-31</td>
+                <td>3.0</td>
+                <td>5.0</td>
+                <td>2023-10-11</td>
+            </tr>
+            <tr>
+                <td>11</td>
+                <td>Seaweed (Nori or Wakame)</td>
+                <td>5.0</td>
+                <td>Pantry</td>
+                <td>2026-12-31</td>
+                <td>1.0</td>
+                <td>3.0</td>
+                <td>2023-10-11</td>
+            </tr>
+            <tr>
+                <td>12</td>
+                <td>Chashu Pork</td>
+                <td>10.0</td>
+                <td>Freezer</td>
+                <td>2025-12-31</td>
+                <td>2.0</td>
+                <td>5.0</td>
+                <td>2023-10-11</td>
+            </tr>
+            <tr>
+                <td>13</td>
+                <td>Spinach</td>
+                <td>15.0</td>
+                <td>Refrigerator</td>
+                <td>2025-04-30</td>
+                <td>3.0</td>
+                <td>5.0</td>
+                <td>2023-10-11</td>
+            </tr>
+            <tr>
+                <td>14</td>
+                <td>Chili Paste</td>
+                <td>2.0</td>
+                <td>Pantry</td>
+                <td>2026-12-31</td>
+                <td>1.0</td>
+                <td>2.0</td>
+                <td>2023-10-11</td>
+            </tr>
+            <tr>
+                <td>15</td>
+                <td>Chicken</td>
+                <td>10.0</td>
+                <td>Refrigerator</td>
+                <td>2025-06-30</td>
+                <td>2.0</td>
+                <td>5.0</td>
+                <td>2023-10-11</td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+<br><br>
+
+<section>
+    <h2>User Preferences Overview</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>User ID</th>
+                <th>Preference Type</th>
+                <th>Preference Value</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Lighting</td>
+                <td>Low Lighting</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Dietary Requirements</td>
+                <td>Vegetarian</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Cooking Schedule</td>
+                <td>Evening Shift</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Lighting</td>
+                <td>Bright Lighting</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Dietary Requirements</td>
+                <td>Low Sodium</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Cooking Schedule</td>
+                <td>Morning Shift</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Lighting</td>
+                <td>Soft Lighting</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Dietary Requirements</td>
+                <td>Gluten-Free</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Cooking Schedule</td>
+                <td>Flexible</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Lighting</td>
+                <td>Dim Lighting</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Dietary Requirements</td>
+                <td>Keto</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Cooking Schedule</td>
+                <td>Evening Shift</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>Lighting</td>
+                <td>Bright Lighting</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>Dietary Requirements</td>
+                <td>Halal</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>Cooking Schedule</td>
+                <td>Night Shift</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>Lighting</td>
+                <td>Low Lighting</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>Dietary Requirements</td>
+                <td>Low Sugar</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>Cooking Schedule</td>
+                <td>Morning Shift</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>Lighting</td>
+                <td>Medium Lighting</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>Dietary Requirements</td>
+                <td>Vegetarian</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>Cooking Schedule</td>
+                <td>Evening Shift</td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+<br><br>
+
+<section>
+    <h2>Current Sensor Readings</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Sensor ID</th>
+                <th>Sensor Type</th>
+                <th>Reading Value</th>
+                <th>Timestamp</th>
+                <th>Device ID</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Temperature</td>
+                <td>22.50</td>
+                <td>2025-04-18 12:00:00</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Humidity</td>
+                <td>45.00</td>
+                <td>2025-04-18 12:01:00</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Smoke Detector</td>
+                <td>0.00</td>
+                <td>2025-04-18 12:02:00</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Motion</td>
+                <td>1.00</td>
+                <td>2025-04-18 12:03:00</td>
+                <td>4</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>Light Sensor</td>
+                <td>350.00</td>
+                <td>2025-04-18 12:04:00</td>
+                <td>5</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>Gas Leak</td>
+                <td>0.00</td>
+                <td>2025-04-18 12:05:00</td>
+                <td>6</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>Water Leak</td>
+                <td>0.00</td>
+                <td>2025-04-18 12:06:00</td>
+                <td>7</td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td>Weight</td>
+                <td>2.40</td>
+                <td>2025-04-18 12:07:00</td>
+                <td>8</td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td>Refrigerator Temp</td>
+                <td>4.00</td>
+                <td>2025-04-18 12:08:00</td>
+                <td>9</td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td>Oven Temp</td>
+                <td>180.00</td>
+                <td>2025-04-18 12:09:00</td>
+                <td>10</td>
+            </tr>
+            <tr>
+                <td>11</td>
+                <td>Microwave Radiation</td>
+                <td>0.02</td>
+                <td>2025-04-18 12:10:00</td>
+                <td>11</td>
+            </tr>
+            <tr>
+                <td>12</td>
+                <td>Air Quality</td>
+                <td>25.00</td>
+                <td>2025-04-18 12:11:00</td>
+                <td>12</td>
+            </tr>
+            <tr>
+                <td>13</td>
+                <td>Door Open</td>
+                <td>1.00</td>
+                <td>2025-04-18 12:12:00</td>
+                <td>13</td>
+            </tr>
+            <tr>
+                <td>14</td>
+                <td>Vibration</td>
+                <td>0.05</td>
+                <td>2025-04-18 12:13:00</td>
+                <td>14</td>
+            </tr>
+            <tr>
+                <td>15</td>
+                <td>Sound Level</td>
+                <td>55.00</td>
+                <td>2025-04-18 12:14:00</td>
+                <td>15</td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+<footer>
+    <p>&copy;  2025 Smart Kitchen | All Rights Reserved</p>
+</footer>
+
+</body>
+</html>
