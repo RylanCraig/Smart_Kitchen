@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sensors</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div>
+<header>
+    <h1>Sensors</h1>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="inventory.html">Inventory</a></li>
+            <li><a href="preferences.html">Preferences</a></li>
+            <li><a href="devices.html">Devices</a></li>
+        </ul>
+    </nav>
+</header>
+<div class="system-overview">
+    <section>
+        <h1> IoT Sensors</h1>
+        <p class="intro-text">Monitor real-time sensor data from your connected kitchen devices below.</p>  
+    </section>
+</div>
+
+<br>
+
+<div class="container">
+<section>
+    <h2>Add a New Sensor Reading</h2>
+    <form action="submit_sensor.php" method="POST">
+        <label for="sensorType">Sensor Type:</label>
+        <input type="text" id="sensorType" name="sensorType" required>
+        <br>
+
+        <label for="readingValue">Reading Value:</label>
+        <input type="number" id="readingValue" name="readingValue" step="0.01" required>
+        <br>
+
+        <label for="deviceID">Device ID:</label>
+        <input type="number" id="deviceID" name="deviceID" required>
+        <br>
+
+        <button type="submit">Submit Sensor Reading</button>
+    </form>
+</section>
+
+<section>
+    <h2>Remove a Sensor Reading</h2>
+    <form action="delete_sensor.php" method="POST">
+        <label for="sensorID">Sensor ID:</label>
+        <input type="number" id="sensorID" name="sensorID" required>
+        <br>
+        <button type="submit">Delete Sensor</button>
+    </form>
+</section>
+
+</div>
+
+<section>
+    <h2>Current Sensor Readings</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Sensor ID</th>
+                <th>Sensor Type</th>
+                <th>Reading Value</th>
+                <th>Timestamp</th>
+                <th>Device ID</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Temperature</td>
+                <td>22.50</td>
+                <td>2025-04-18 12:00:00</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Humidity</td>
+                <td>45.00</td>
+                <td>2025-04-18 12:01:00</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Smoke Detector</td>
+                <td>0.00</td>
+                <td>2025-04-18 12:02:00</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Motion</td>
+                <td>1.00</td>
+                <td>2025-04-18 12:03:00</td>
+                <td>4</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>Light Sensor</td>
+                <td>350.00</td>
+                <td>2025-04-18 12:04:00</td>
+                <td>5</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>Gas Leak</td>
+                <td>0.00</td>
+                <td>2025-04-18 12:05:00</td>
+                <td>6</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>Water Leak</td>
+                <td>0.00</td>
+                <td>2025-04-18 12:06:00</td>
+                <td>7</td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td>Weight</td>
+                <td>2.40</td>
+                <td>2025-04-18 12:07:00</td>
+                <td>8</td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td>Refrigerator Temp</td>
+                <td>4.00</td>
+                <td>2025-04-18 12:08:00</td>
+                <td>9</td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td>Oven Temp</td>
+                <td>180.00</td>
+                <td>2025-04-18 12:09:00</td>
+                <td>10</td>
+            </tr>
+            <tr>
+                <td>11</td>
+                <td>Microwave Radiation</td>
+                <td>0.02</td>
+                <td>2025-04-18 12:10:00</td>
+                <td>11</td>
+            </tr>
+            <tr>
+                <td>12</td>
+                <td>Air Quality</td>
+                <td>25.00</td>
+                <td>2025-04-18 12:11:00</td>
+                <td>12</td>
+            </tr>
+            <tr>
+                <td>13</td>
+                <td>Door Open</td>
+                <td>1.00</td>
+                <td>2025-04-18 12:12:00</td>
+                <td>13</td>
+            </tr>
+            <tr>
+                <td>14</td>
+                <td>Vibration</td>
+                <td>0.05</td>
+                <td>2025-04-18 12:13:00</td>
+                <td>14</td>
+            </tr>
+            <tr>
+                <td>15</td>
+                <td>Sound Level</td>
+                <td>55.00</td>
+                <td>2025-04-18 12:14:00</td>
+                <td>15</td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+</div>
+
+<footer>
+    <p>&copy;  2025 Smart Kitchen | All Rights Reserved</p>
+</footer>
+
+</body>
+</html>
