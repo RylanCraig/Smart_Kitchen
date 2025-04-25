@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Devices</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>Devices</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="inventory.html">Inventory</a></li>
+                <li><a href="preferences.html">Preferences</a></li>
+                <li><a href="sensors.html">Sensors</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+<div class="system-overview">
+    <section>
+        <h2>Manage Devices</h2>
+        <p class="intro-text">View and control your smart kitchen devices.</p>
+</div> 
+   
+<br>
+
+        <!-- Form to add a new device -->
+        <h2>Add a New Device</h2>
+        <form action="submit_device.php" method="POST">
+            <label for="deviceName">Device Name:</label>
+            <input type="text" id="deviceName" name="deviceName" required>
+            <br>
+
+            <label for="deviceStatus">Device Status:</label>
+            <select id="deviceStatus" name="deviceStatus" required>
+                <option value="Operational">Operational</option>
+                <option value="Error">Error</option>
+                <option value="Maintenance">Maintenance</option>
+            </select>
+            <br>
+
+            <label for="logDetails">Log Details:</label>
+            <textarea id="logDetails" name="logDetails" rows="4" cols="50" required></textarea>
+            <br>
+
+            <button type="submit">Submit Device</button>
+        </form>
+    </section>
+
+    <section>
+        <h2>Remove a Device from the System</h2>
+        <form action="delete_device.php" method="POST">
+            <label for="DeviceID">Device ID</label>
+            <input type="text" id="DeviceID" name="deviceID" required>
+            <button type="submit">Delete Device</button>
+        </form>
+    </section>
+
+</div>
+
+<section>
+    <h2>Current Device Table</h2>
+    <table border = "1">
+        <tr>
+            <th>Device ID</th>
+            <th>Device Name</th>
+            <th>Status</th>
+            <th>Log Details</th>
+            <th>Last Updated</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Smart Dishwasher</td>
+            <td>Operational</td>
+            <td>Coordinates cleaning schedules and status updates.</td>
+            <td>2025-04-08</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Smart Lighting System</td>
+            <td>Operational</td>
+            <td>Adjusts lighting based on cooking activities or user preferences.</td>
+            <td>2025-04-07</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Smart Ventilation System</td>
+            <td>Operational</td>
+            <td>Monitors air quality and adjusts to remove odors or smoke.</td>
+            <td>2025-04-06</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>Smart Microwave</td>
+            <td>Operational</td>
+            <td>Interfaces with the robotic chef for quick heating tasks.</td>
+            <td>2025-04-06</td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>Smart Pantry</td>
+            <td>Operational</td>
+            <td>Tracks inventory and shares ingredient information.</td>
+            <td>2025-04-08</td>
+        </tr>
+        <tr>
+            <td>6</td>
+            <td>Smart Coffee Maker</td>
+            <td>Operational</td>
+            <td>Operates based on user schedules or commands from connected devices.</td>
+            <td>2025-04-08</td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td>Water Quality Sensors</td>
+            <td>Operational</td>
+            <td>Monitors water supply for purity or cooking safety.</td>
+            <td>2025-04-08</td>
+        </tr>
+        <tr>
+            <td>8</td>
+            <td>Energy Monitoring Devices</td>
+            <td>Operational</td>
+            <td>Tracks power usage of all connected appliances</td>
+            <td>2025-04-08</td>
+        </tr>
+        <tr>
+            <td>9</td>
+            <td>Smart Trash Bin</td>
+            <td>Operational</td>
+            <td>Provides waste management data or inventory for disposed items.</td>
+            <td>2025-04-08</td>
+        </tr>
+        <tr>
+            <td>10</td>
+            <td>Robotic Chef</td>
+            <td>Operational</td>
+            <td>Communicates with sensors and other appliances for real-time adjustments.</td>
+            <td>2025-04-08</td>
+        </tr>
+        <tr>
+            <td>11</td>
+            <td>Smart Stove</td>
+            <td>Operational</td>
+            <td>Communicates with the robotic chef and temperature sensors for cooking precision.</td>
+            <td>2025-04-08</td>
+        </tr>
+        <tr>
+            <td>12</td>
+            <td>Refrigerator</td>
+            <td>Operational</td>
+            <td>Shares ingredient inventory and freshness data with the robotic chef and other appliances.</td>
+            <td>2025-04-08</td>
+        </tr>
+        <tr>
+            <td>13</td>
+            <td>Smart Oven</td>
+            <td>Operational</td>
+            <td>Interacts with the robotic chef for pre-heating and other cooking tasks</td>
+            <td>2025-04-08</td>
+        </tr>
+        <tr>
+            <td>14</td>
+            <td>IoT Sensors</td>
+            <td>Operational</td>
+            <td>Temperature sensors, motion sensors, weight sensors, and humidity sensors.</td>
+            <td>2025-04-08</td>
+        </tr>
+        <tr>
+            <td>15</td>
+            <td>IoT Cameras</td>
+            <td>Operational</td>
+            <td>Assist the robotic chef with vision-based tasks</td>
+            <td>2025-04-08</td>
+        </tr>
+    </table>
+</section>
+
+<footer>
+    <p>&copy;  2025 Smart Kitchen | All Rights Reserved</p>
+</footer>
+
+</body>
+</html>
