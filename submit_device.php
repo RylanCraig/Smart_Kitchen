@@ -18,7 +18,7 @@ $deviceStatus = $_POST['deviceStatus'];
 $logDetails = $_POST['logDetails'];
 
 // Prepare & bind
-$stmt = $conn->prepare("INSERT INTO device_status (DeviceName, Status, LogDetails) VALUES (?, ?, ?)");
+$stmt = $conn->prepare("INSERT INTO Device_Status (DeviceName, Status, LogDetails) VALUES (?, ?, ?)");
 $stmt->bind_param("sss", $deviceName, $deviceStatus, $logDetails);
 
 // Execute
@@ -30,3 +30,4 @@ if ($stmt->execute()) {
 
 $stmt->close();
 $conn->close();
+?>
